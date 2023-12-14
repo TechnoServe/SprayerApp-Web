@@ -1,0 +1,15 @@
+{
+    "autoload": 
+	{
+        "psr-4": 
+		{
+			"sprint\\": ""
+		}
+    },
+    "require": {
+        "respect/validation": "^2.2",
+        "phpmailer/phpmailer": "^6.8",
+        "league/oauth2-client": "^2.7",
+        "twilio/sdk": "^7.12"
+    }
+}

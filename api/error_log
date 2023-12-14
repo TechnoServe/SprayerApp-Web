@@ -1,0 +1,363 @@
+[21-Jun-2023 21:24:05 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 21:24:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(62): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(55): sprint\models\Api->profiles()
+#2 [internal function]: sprint\http\controllers\Api->profiles()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[21-Jun-2023 21:24:06 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 21:24:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(62): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(55): sprint\models\Api->profiles()
+#2 [internal function]: sprint\http\controllers\Api->profiles()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[21-Jun-2023 21:28:19 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 21:28:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(62): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(55): sprint\models\Api->profiles()
+#2 [internal function]: sprint\http\controllers\Api->profiles()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[21-Jun-2023 21:28:30 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 21:28:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(62): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(55): sprint\models\Api->profiles()
+#2 [internal function]: sprint\http\controllers\Api->profiles()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[21-Jun-2023 22:27:21 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 22:27:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(62): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(55): sprint\models\Api->profiles()
+#2 [internal function]: sprint\http\controllers\Api->profiles()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[21-Jun-2023 22:30:13 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 22:30:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(62): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(55): sprint\models\Api->profiles()
+#2 [internal function]: sprint\http\controllers\Api->profiles()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[21-Jun-2023 22:30:32 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 22:30:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:579
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(117): sprint\database\Model->result()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(69): sprint\models\Api->authanticate(Array)
+#2 [internal function]: sprint\http\controllers\Api->authanticate()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 579
+[21-Jun-2023 22:53:57 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 22:53:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(62): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(55): sprint\models\Api->profiles()
+#2 [internal function]: sprint\http\controllers\Api->profiles()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[21-Jun-2023 22:54:09 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 22:54:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:579
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(117): sprint\database\Model->result()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(69): sprint\models\Api->authanticate(Array)
+#2 [internal function]: sprint\http\controllers\Api->authanticate()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 579
+[21-Jun-2023 22:54:33 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 22:54:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:579
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(117): sprint\database\Model->result()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(69): sprint\models\Api->authanticate(Array)
+#2 [internal function]: sprint\http\controllers\Api->authanticate()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 579
+[21-Jun-2023 23:00:01 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 23:00:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(62): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(55): sprint\models\Api->profiles()
+#2 [internal function]: sprint\http\controllers\Api->profiles()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[21-Jun-2023 23:23:39 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 23:23:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(62): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(55): sprint\models\Api->profiles()
+#2 [internal function]: sprint\http\controllers\Api->profiles()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[21-Jun-2023 23:23:59 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 23:23:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:579
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(117): sprint\database\Model->result()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(69): sprint\models\Api->authanticate(Array)
+#2 [internal function]: sprint\http\controllers\Api->authanticate()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 579
+[21-Jun-2023 23:26:18 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[21-Jun-2023 23:26:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(62): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(55): sprint\models\Api->profiles()
+#2 [internal function]: sprint\http\controllers\Api->profiles()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[22-Jun-2023 01:25:32 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[22-Jun-2023 01:25:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:579
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(117): sprint\database\Model->result()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(69): sprint\models\Api->authanticate(Array)
+#2 [internal function]: sprint\http\controllers\Api->authanticate()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 579
+[22-Jun-2023 01:25:34 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[22-Jun-2023 01:25:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:579
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(117): sprint\database\Model->result()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(69): sprint\models\Api->authanticate(Array)
+#2 [internal function]: sprint\http\controllers\Api->authanticate()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 579
+[22-Jun-2023 01:51:57 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[22-Jun-2023 01:51:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(62): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(55): sprint\models\Api->profiles()
+#2 [internal function]: sprint\http\controllers\Api->profiles()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[22-Jun-2023 01:53:52 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[22-Jun-2023 01:53:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(62): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(55): sprint\models\Api->profiles()
+#2 [internal function]: sprint\http\controllers\Api->profiles()
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[22-Jun-2023 02:00:36 UTC] PHP Fatal error:  Uncaught Exception: The informed route /farmer/ was not found in /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php:472
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#1 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php on line 472
+[22-Jun-2023 02:00:42 UTC] PHP Fatal error:  Uncaught Exception: The informed route /farmers/ was not found in /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php:472
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#1 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php on line 472
+[22-Jun-2023 02:03:09 UTC] PHP Fatal error:  Uncaught Exception: The informed route /farmers/ was not found in /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php:472
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#1 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php on line 472
+[22-Jun-2023 02:03:25 UTC] PHP Fatal error:  Uncaught Exception: The informed route /farmers/ was not found in /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php:472
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#1 {main}
+  thrown in /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php on line 472
+[24-Jul-2023 19:04:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date_of_next_application' in 'field list' in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:351
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php(351): PDO->prepare('INSERT INTO che...')
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(36): sprint\database\Model->values(Array)
+#2 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(60): sprint\models\Api->save('chemical_applic...', Array, 'chemical_applic...')
+#3 [internal function]: sprint\http\controllers\Api->save('chemical_applic...', 'chemical_applic...')
+#4 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#5 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SR in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 351
+[24-Jul-2023 19:04:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date_of_next_application' in 'field list' in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:351
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php(351): PDO->prepare('INSERT INTO che...')
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(36): sprint\database\Model->values(Array)
+#2 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(60): sprint\models\Api->save('chemical_applic...', Array, 'chemical_applic...')
+#3 [internal function]: sprint\http\controllers\Api->save('chemical_applic...', 'chemical_applic...')
+#4 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#5 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SR in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 351
+[24-Jul-2023 19:07:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date_of_next_application' in 'field list' in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:351
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php(351): PDO->prepare('INSERT INTO che...')
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(36): sprint\database\Model->values(Array)
+#2 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(60): sprint\models\Api->save('chemical_applic...', Array, 'chemical_applic...')
+#3 [internal function]: sprint\http\controllers\Api->save('chemical_applic...', 'chemical_applic...')
+#4 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#5 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SR in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 351
+[24-Jul-2023 19:07:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'date_of_next_application' in 'field list' in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:351
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php(351): PDO->prepare('INSERT INTO che...')
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(36): sprint\database\Model->values(Array)
+#2 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(60): sprint\models\Api->save('chemical_applic...', Array, 'chemical_applic...')
+#3 [internal function]: sprint\http\controllers\Api->save('chemical_applic...', 'chemical_applic...')
+#4 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#5 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SR in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 351
+[25-Jul-2023 13:01:29 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[25-Jul-2023 13:01:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(98): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(65): sprint\models\Api->fetch('chemical_acquis...', Array, 'chemical_acquis...')
+#2 [internal function]: sprint\http\controllers\Api->fetch('chemical_acquis...', 'chemical_acquis...')
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  throw in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[25-Jul-2023 13:01:29 UTC] PHP Warning:  PDO::query(): SQLSTATE[00000]: No error: PDO constructor was not called in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 559
+[25-Jul-2023 13:01:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:621
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(98): sprint\database\Model->results()
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(65): sprint\models\Api->fetch('preparatory_act...', Array, 'preparatory_act...')
+#2 [internal function]: sprint\http\controllers\Api->fetch('preparatory_act...', 'preparatory_act...')
+#3 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#4 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#5 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/index.php(26): sprint\sroute\SRoute::run()
+#8 {main}
+  throw in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 621
+[28-Jul-2023 09:42:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list' in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:351
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php(351): PDO->prepare('INSERT INTO far...')
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(36): sprint\database\Model->values(Array)
+#2 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(60): sprint\models\Api->save('farmers', Array, 'farmer_uid')
+#3 [internal function]: sprint\http\controllers\Api->save('farmers', 'farmer_uid')
+#4 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#5 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Arra in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 351
+[28-Jul-2023 09:42:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'plot_type' in 'field list' in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:351
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php(351): PDO->prepare('INSERT INTO plo...')
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(36): sprint\database\Model->values(Array)
+#2 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(60): sprint\models\Api->save('plots', Array, 'plot_uid')
+#3 [internal function]: sprint\http\controllers\Api->save('plots', 'plot_uid')
+#4 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#5 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#8 in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 351
+[28-Jul-2023 09:42:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list' in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:394
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php(394): PDO->prepare('UPDATE farmers ...')
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(27): sprint\database\Model->where('farmer_uid = 16...')
+#2 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(60): sprint\models\Api->save('farmers', Array, 'farmer_uid')
+#3 [internal function]: sprint\http\controllers\Api->save('farmers', 'farmer_uid')
+#4 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#5 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execu in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 394
+[28-Jul-2023 09:42:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'plot_type' in 'field list' in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php:351
+Stack trace:
+#0 /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php(351): PDO->prepare('INSERT INTO plo...')
+#1 /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php(36): sprint\database\Model->values(Array)
+#2 /home/agriidsl/sprayer.agritechmoz.com/api/http/controllers/Api.php(60): sprint\models\Api->save('plots', Array, 'plot_uid')
+#3 [internal function]: sprint\http\controllers\Api->save('plots', 'plot_uid')
+#4 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(418): call_user_func_array(Array, Array)
+#5 [internal function]: sprint\sroute\SRoute::sprint\sroute\{closure}(Array, 0, Array)
+#6 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(393): array_walk(Array, Object(Closure), Array)
+#7 /home/agriidsl/sprayer.agritechmoz.com/api/sroute/SRoute.php(500): sprint\sroute\SRoute::execute(Array, Array)
+#8 in /home/agriidsl/sprayer.agritechmoz.com/api/database/Model.php on line 351
+[29-Jul-2023 16:20:19 UTC] PHP Warning:  array_column() expects parameter 1 to be array, string given in /home/agriidsl/sprayer.agritechmoz.com/api/models/Api.php on line 80
