@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Sprayer app for private sector">
 	<meta name="generator" content="Technoserve">
-	<title>Sprayer App | {{ $title ?? "Home" }}</title>
+	<title>Sprayer App. | {{ $title ?? "Home" }}</title>
 
 	<!-- Bootstrap core CSS -->
 	
