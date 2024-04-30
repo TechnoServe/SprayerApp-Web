@@ -66,7 +66,6 @@
 		$activeGroup = $_SESSION["activeGroup"] ?? "dashboard";
 		$activeLink = $_SESSION["activeLink"] ?? "dashboard";
 		$color = "blue";
-		in_array("", $array);
 	?>
 	<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
 		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
@@ -133,6 +132,7 @@
 								<li data-route="<?php echo route('/logs') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='logs' ? $color : ''; ?>">Logs</li>
 								<li data-route="<?php echo route('/requests') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='requests' ? $color : ''; ?>">Requests</li>
 								<li data-route="<?php echo route('/campaigns') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='campaigns' ? $color : ''; ?>">Campaign Management</li>
+								<li data-route="<?php echo route('/farmers/sms') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='smsalerts' ? $color : ''; ?>">SMS Alert</li>
 							</ul>
 						</li>
 								<li class="nav-item"></li>
@@ -159,6 +159,7 @@
 	<table id="result" class="table table-striped table-bordered table-condensed table-sm dt-responsive nowrap" style="width: 100%;">
 		<thead>
 			<tr>
+				<th>Provider</th>
 				<th>Farmer Name</th>
 				<th>Mobile</th>
 				<th>Agreement Id</th>
@@ -175,6 +176,7 @@
 		<tbody></tbody>
 		<tfoot>
 			<tr>
+				<th class="filterFooter">Provider</th>
 				<th class="filterFooter">Farmer Name</th>
 				<th class="filterFooter">Mobile</th>
 				<th class="filterFooter">Agreement Id</th>

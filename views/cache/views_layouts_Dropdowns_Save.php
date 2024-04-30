@@ -50,6 +50,10 @@
 		.pointer{
 			cursor: pointer;
 		}
+		.activeLink, .activeGroup{
+			color: blue;
+			text-transform: capitalize;
+		}
 	</style>
 
 
@@ -58,6 +62,11 @@
 </head>
 
 <body>
+	<?php
+		$activeGroup = $_SESSION["activeGroup"] ?? "dashboard";
+		$activeLink = $_SESSION["activeLink"] ?? "dashboard";
+		$color = "blue";
+	?>
 	<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
 		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
 		<span class="fs-4"><?php echo $_SESSION["user"]["first_name"] ?></span><br />
@@ -79,80 +88,55 @@
 				<div class="position-sticky pt-3 mt-5">
 					<ul class="nav flex-column">
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="<?php echo route('/') ?>">
+							<a class="nav-link" aria-current="page" href="<?php echo route('/') ?>" style="color:<?php echo $activeGroup=='dashboard' ? $color : ''; ?>">
 								<span data-feather="home"></span>
 								Report Dashboard
 							</a>
 						</li>
 					</ul>
 
-					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted d-none">
 						<span>Administration Dashboard</span>
 						<a class="link-secondary" href="#" aria-label="Add a new report">
 							<span data-feather="plus-circle"></span>
 						</a>
 					</h6>
 					<ul class="nav flex-column mb-2">
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo route('/users') ?>">
-								<span data-feather="users"></span>
-								Users
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo route('/profiles') ?>">
-								<span data-feather="file-text"></span>
-								Profiles
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo route('/farmers') ?>">
-								<span data-feather="file-text"></span>
-								Farmers
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo route('/plots') ?>">
-								<span data-feather="file-text"></span>
-								Plots
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo route('/applications') ?>">
-								<span data-feather="file-text"></span>
-								Applications
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo route('/equipments') ?>">
-								<span data-feather="file-text"></span>
-								Equipments
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo route('/acquisitions') ?>">
-								<span data-feather="file-text"></span>
-								Chemical Acquisitions
-							</a>
-						</li>
+						<li class="nav-item" >
+							<a class="nav-link" href="#data_section" data-bs-toggle="collapse"  style="color:<?php echo $activeGroup=='data' ? $color : ''; ?>" ><strong>Data</i></strong></a>
+							<ul class="nav-item collapse <?php echo in_array($activeGroup, ['finances','data']) ? 'show' : ''; ?>" id="data_section">
+								<li data-route="<?php echo route('/farmers') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='farmers' ? $color : ''; ?>">Farmers</li>
+								<li data-route="<?php echo route('/plots') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='plots' ? $color : ''; ?>">Plots</li>
+								<li data-route="<?php echo route('/applications') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='applications' ? $color : ''; ?>">Applications</li>
+								<li data-route="<?php echo route('/equipments') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='equipments' ? $color : ''; ?>">Equipments</li>
+								<li data-route="<?php echo route('/acquisitions') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='acquisitions' ? $color : ''; ?>">Chemical acquisitions</li>
 
-						<li class="nav-item">
-							<a class="nav-link" href="#finances_section" data-bs-toggle="collapse">Finances</a>
-							<ul class="nav-item collapse" id="finances_section">
-								<li data-route="<?php echo route('/payments') ?>" class="nav-item pointer">Payments</li>
-								<li data-route="<?php echo route('/incomes') ?>" class="nav-item pointer">Expenses / Incomes</li>
-								<li data-route="<?php echo route('/agreements') ?>" class="nav-item pointer">Agreements </li>
+								<li class="nav-item">
+									<a class="nav-link" href="#finances_section" data-bs-toggle="collapse" style="color:<?php echo $activeGroup=='finances' ? $color : ''; ?>"><strong>Finances</strong></a>
+									<ul class="nav-item collapse <?php echo $activeGroup=='finances' ? 'show' : ''; ?>" id="finances_section">
+										<li data-route="<?php echo route('/payments') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='payments' ? $color : ''; ?>">Payments</li>
+										<li data-route="<?php echo route('/incomes') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='incomes' ? $color : ''; ?>">Expenses / Incomes</li>
+										<li data-route="<?php echo route('/agreements') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='agreements' ? $color : ''; ?>">Agreements</li>
+									</ul>
+								</li>
 							</ul>
 						</li>
-
-						<li class="nav-item">
-							<a class="nav-link" href="#settings_section" data-bs-toggle="collapse">Settings</a>
-							<ul class="nav-item collapse" id="settings_section">
-								<li data-route="<?php echo route('/dropdowns') ?>" class="nav-item pointer">Dropdowns</li>
-								<li data-route="<?php echo route('/faqs') ?>" class="nav-item pointer">FAQ</li>
-								<li data-route="<?php echo route('/logs') ?>" class="nav-item pointer">Logs</li>
+						<?php if(!($_SESSION['user']['isSeller'] ?? true)): ?>
+						<li class="nav-item" >
+							<a class="nav-link" href="#settings_section" data-bs-toggle="collapse"  style="color:<?php echo $activeGroup=='admin' ? $color : ''; ?>"><strong>Admin Features</i></strong></a>
+							<ul class="nav-item collapse <?php echo $activeGroup=='admin' ? 'show' : ''; ?>" id="settings_section">
+								<li data-route="<?php echo route('/users') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='users' ? $color : ''; ?>">Users</li>
+								<li data-route="<?php echo route('/profiles') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='profiles' ? $color : ''; ?>">Profiles</li>
+								<li data-route="<?php echo route('/dropdowns') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='dropdowns' ? $color : ''; ?>">Dropdowns</li>
+								<li data-route="<?php echo route('/faqs') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='faqs' ? $color : ''; ?>">FAQs</li>
+								<li data-route="<?php echo route('/logs') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='logs' ? $color : ''; ?>">Logs</li>
+								<li data-route="<?php echo route('/requests') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='requests' ? $color : ''; ?>">Requests</li>
+								<li data-route="<?php echo route('/campaigns') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='campaigns' ? $color : ''; ?>">Campaign Management</li>
+								<li data-route="<?php echo route('/farmers/sms') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='smsalerts' ? $color : ''; ?>">SMS Alert</li>
 							</ul>
 						</li>
+								<li class="nav-item"></li>
+						<?php endif ?>
 					</ul>
 				</div>
 			</nav>
@@ -300,6 +284,15 @@
 				location.href= pointer.dataset.route;
 			})
 		}
+		
+		// let accordions = document.querySelectorAll(".accordion");
+		// accordions.addEventListener("click", function(e){
+		// 	e.preventDefault();
+		// 	let icon = this.dataset.icon;
+		// 	let eleIcon = document.querySelector("#"+icon);
+		// 	eleIcon.classList.toggle("fa-minus");
+		// })
+
 	</script>
 </body>
 

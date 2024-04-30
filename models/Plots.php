@@ -126,7 +126,7 @@ class Plots extends Model
 
                 ")
             ->join("(SELECT farmer_uid, first_name, last_name, gender, mobile_number, province, district FROM farmers) as ".Alias::farmers." ON ".Alias::farmers.".farmer_uid = ".Alias::plots.".farmer_uid")
-            ->left("campaigns as " . Alias::campaigns . " ON DATE(" . Alias::plots . ".created_at) BETWEEN " . Alias::campaigns . ".opening AND  " . Alias::campaigns . ".closing")
+            ->left("campains as " . Alias::campaigns . " ON DATE(" . Alias::plots . ".created_at) BETWEEN " . Alias::campaigns . ".opening AND  " . Alias::campaigns . ".closing")
 
             ->where("               
                 (".DataTable::filter(Alias::plots).")

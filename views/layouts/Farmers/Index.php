@@ -21,7 +21,8 @@
 	<table id="result" class="table table-striped table-bordered table-condensed table-sm dt-responsive nowrap" style="width: 100%;">
 		<thead>
 			<tr>
-				<th>Name</th>
+				<th>Provider</th>
+				<th>Farmer Name</th>
 				<th>Province</th>
 				<th>District</th>
 				<th>Administrative Post</th>
@@ -35,7 +36,8 @@
 		<tbody></tbody>
 		<tfoot>
 			<tr>
-				<th class="filterFooter">Name</th>
+				<th class="filterFooter">Provider</th>
+				<th class="filterFooter">Farmer Name</th>
 				<th class="filterFooter">Province</th>
 				<th class="filterFooter">District</th>
 				<th class="filterFooter">Administrative Post</th>

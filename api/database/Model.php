@@ -45,9 +45,14 @@ class Model extends PDO
 	
     public function __construct() {
         try {
-            parent::__construct('mysql:host=localhost;dbname=agriidsl_sprayer;charset=utf8',
-                "agriidsl_sprayer","hKGJW}CmG%z2",array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'")
-            );
+            $host = $_ENV["DATABASE_URL"];
+            $dbName = $_ENV["DATABASE_NAME"];
+            $user = $_ENV["DATABASE_USER"];
+            $password = $_ENV["DATABASE_PASSWORD"];
+            $chartset = $_ENV["DATABASE_CHARSET"];
+
+            parent::__construct("mysql:host={$host};dbname={$dbName};charset={$chartset}", $user, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+           
             /* Extend PDO statement class */
             $this->setAttribute(PDO::ATTR_STATEMENT_CLASS, [_pdo_statement::class]);
             /* Disable emulated prepared statements */

@@ -17,6 +17,7 @@
 	<table id="result" class="table table-striped table-bordered table-condensed table-sm dt-responsive nowrap" style="width: 100%;">
 		<thead>
 			<tr>
+				<th>Provider</th>
 				<th>Farmer Name</th>
 				<th>Mobile</th>
 				<th>Agreement Id</th>
@@ -33,6 +34,7 @@
 		<tbody></tbody>
 		<tfoot>
 			<tr>
+				<th class="filterFooter">Provider</th>
 				<th class="filterFooter">Farmer Name</th>
 				<th class="filterFooter">Mobile</th>
 				<th class="filterFooter">Agreement Id</th>

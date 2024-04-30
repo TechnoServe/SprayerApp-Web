@@ -13,7 +13,7 @@
 	<table id="result" class="table table-striped table-bordered table-condensed table-sm dt-responsive nowrap" style="width: 100%;">
 		<thead>
 			<tr>
-				<th>Farmer Name</th>
+				<th>Provider</th>
 				<th>Income Id</th>
 				<th>Category</th>
 				<th>Price</th>

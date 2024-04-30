@@ -122,10 +122,14 @@ class Agreements extends Model
                         " . Alias::farmers . ".province,
                         " . Alias::farmers . ".district,
                         " . Alias::farmers . ".mobile_number,
-                        " . Alias::farmers . ".gender
+                        " . Alias::farmers . ".gender,
+                        CONCAT_WS(' '," .Alias::sprayers. ".first_name," .Alias::sprayers. ".last_name) as sprayer
+
 
                 ")
             ->join("(SELECT id, farmer_uid, first_name, last_name, gender, mobile_number, province, district, deleted_at, created_at,updated_at, last_sync_at FROM farmers) as ".Alias::farmers." ON ".Alias::farmers.".farmer_uid = ".Alias::agreements.".farmer_uid")
+            ->join("users as " . Alias::sprayers . " ON " . Alias::sprayers . ".user_uid = " . Alias::agreements . ".user_uid ")
+           
             ->where("               
                 (".DataTable::filter(Alias::farmers).")
                 {$filterCondition}
@@ -137,19 +141,21 @@ class Agreements extends Model
         $this->removeEmptyEntries();
         $post = $_POST;
         $columnsFilter = array(
-            array('db' => "CONCAT(" . Alias::farmers . ".first_name, ' '," . Alias::farmers . ".last_name)", 'dt' => 0),
-            array('db' => Alias::farmers . ".mobile_number", 'dt' => 1),
-            array('db' => Alias::agreements . ".payment_aggreement_uid", 'dt' => 2),
-            array('db' => Alias::agreements . ".payment_type", 'dt' => 3),
-            array('db' => Alias::agreements . ".aggreed_payment", 'dt' => 4),
-            array('db' => Alias::agreements . ".aggreed_trees_to_spray", 'dt' => 5),
-            array('db' => Alias::agreements . ".number_of_applications", 'dt' => 6),
-            array('db' => Alias::farmers . ".province", 'dt' => 7),
-            array('db' => Alias::farmers . ".district", 'dt' => 8),
-            array('db' => Alias::agreements . ".last_sync_at", 'dt' => 9),
+            array('db' => "CONCAT_WS(' '," .Alias::sprayers. ".first_name," .Alias::sprayers. ".last_name)", 'dt' => 0),
+            array('db' => "CONCAT(" . Alias::farmers . ".first_name, ' '," . Alias::farmers . ".last_name)", 'dt' => 1),
+            array('db' => Alias::farmers . ".mobile_number", 'dt' => 2),
+            array('db' => Alias::agreements . ".payment_aggreement_uid", 'dt' => 3),
+            array('db' => Alias::agreements . ".payment_type", 'dt' => 4),
+            array('db' => Alias::agreements . ".aggreed_payment", 'dt' => 5),
+            array('db' => Alias::agreements . ".aggreed_trees_to_spray", 'dt' => 6),
+            array('db' => Alias::agreements . ".number_of_applications", 'dt' => 7),
+            array('db' => Alias::farmers . ".province", 'dt' => 8),
+            array('db' => Alias::farmers . ".district", 'dt' => 9),
+            array('db' => Alias::agreements . ".last_sync_at", 'dt' => 10),
         );
 
         $columnsOrder = array(
+             array('db' => "15", 'dt' => 0),
              array('db' => "2", 'dt' => 0),
             array('db' => Alias::farmers . ".mobile_number", 'dt' => 1),
             array('db' => Alias::agreements . ".payment_aggreement_uid", 'dt' => 2),
@@ -180,6 +186,7 @@ class Agreements extends Model
         foreach ($resultset as $value) :
 
             $output = array();
+            $output[] = $value["sprayer"];
             $output[] = $value["farmer"];
             $output[] = $value["mobile_number"];
             $output[] = $value["payment_aggreement_uid"];

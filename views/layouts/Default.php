@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Sprayer app for private sector">
 	<meta name="generator" content="Technoserve">
-	<title>Sprayer App. | {{ $title ?? "Home" }}</title>
+	<title>Sprayer App | {{ $title ?? "Home" }}</title>
 
 	<!-- Bootstrap core CSS -->
 	
@@ -119,7 +119,6 @@
 										<li data-route="{{ route('/agreements') }}" class="nav-item pointer" style="color:{{ $activeLink=='agreements' ? $color : '';}}">Agreements</li>
 									</ul>
 								</li>
-								<li data-route="{{ route('/acquisitions') }}" class="nav-item pointer" style="color:{{ $activeLink=='acquisitions' ? $color : '';}}">Chemical acquisitions</li>
 							</ul>
 						</li>
 						{%if(!($_SESSION['user']['isSeller'] ?? true)):%}

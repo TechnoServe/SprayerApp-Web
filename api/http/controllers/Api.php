@@ -55,6 +55,16 @@ class Api extends Controller
         echo $this->api->profiles();
     }
     
+    public function campaigns()
+    {
+        echo $this->api->campaigns();
+    }
+    
+    public function faqs()
+    {
+        echo $this->api->faqs();
+    }
+    
     public function save($table, $uidKey)
     {
         echo $this->api->save($table, $this->json, $uidKey);

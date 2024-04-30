@@ -17,5 +17,5 @@ class Alias{
     const locations = "locations";
     const requests = "requests";
     const faqs = "faqs";
-    const campaigns = "campaigns";
+    const campaigns = "campains";
 }

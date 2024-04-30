@@ -1,7 +1,7 @@
 <?php
+require_once __DIR__ . "/../vendor/autoload.php";
 
-// $root = "https://sprayer.agritechmoz.com";
-$root = "http://localhost:8001";
+$root = $_ENV["APP_URI"];
 
 function route($route)
 {

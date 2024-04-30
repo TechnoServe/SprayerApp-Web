@@ -61,7 +61,7 @@
 
       <div class="form-floating mb-3 mt-3">
         <input type="text" name="username" class="form-control" id="username" placeholder="">
-        <label for="username">Username:</label>
+        <label for="username">Username</label>
       </div>
       <div class="form-floating mb-3 mt-3" id="password-content">
         <input type="password" name="password" class="form-control" id="password" placeholder="">
@@ -75,7 +75,7 @@
       </div>
       <button class="btn btn-primary btn-lg w-100 mt-3" id="btnLogin" type="submit">Login</button>
       <p class="mt-2" style="display: flex; align-items: center; justify-content: space-between">
-        <a href="/forgot-password">forgot password?</a>
+        <a href="/forgot-password">Forgot password?</a>
         <button type="button" class="btn btn-link" onclick="contentRequest.innerHTML=''" data-bs-toggle="modal" data-bs-target="#modalSeller">Register to be seller</button>
       </p>
       <p class="mt-5 mb-3 text-muted">&copy; 2022 - 2023</p>

@@ -1,6 +1,9 @@
 <?php
 
-$root = "http://localhost/sprayerapplive";
+require_once __DIR__ . "/../vendor/autoload.php";
+
+$root = $_ENV["API_APP_URI"];
+// $root = "http://localhost/sprayerapplive";
 
 function route($route)
 {

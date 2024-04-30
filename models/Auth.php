@@ -43,7 +43,7 @@ class Auth extends Model
                     $_SESSION["user"]["isSeller"] = $user->isSeller($result["id"]) > 0 ? true : false;
                     #Update the status
                     $status = "success";
-                    $message = "Login successfuly.";
+                    $message = "Login successfully.";
                     $type = "success";
                 }elseif($result["deleted_at"] == null && $result["web_access"] != 1){
                     #Update the status

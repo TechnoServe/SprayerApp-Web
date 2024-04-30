@@ -119,7 +119,6 @@
 										<li data-route="<?php echo route('/agreements') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='agreements' ? $color : ''; ?>">Agreements</li>
 									</ul>
 								</li>
-								<li data-route="<?php echo route('/acquisitions') ?>" class="nav-item pointer" style="color:<?php echo $activeLink=='acquisitions' ? $color : ''; ?>">Chemical acquisitions</li>
 							</ul>
 						</li>
 						<?php if(!($_SESSION['user']['isSeller'] ?? true)): ?>

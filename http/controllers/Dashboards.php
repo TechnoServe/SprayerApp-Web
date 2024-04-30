@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: TNS Programmer
@@ -25,8 +24,9 @@ class Dashboards extends Controller
         $this->campaign = new \sprint\models\Campaigns();
         $this->viewsPath = "views/layouts/";
         $this->data["campaigns"] = $this->campaign->all();
-        $_SESSION["activeGroup"] = "dashboard";
-        $_SESSION["activeLink"] = "dashboard";
+        $_SESSION["activeGroup"] = "dashboard"; 
+        $_SESSION["activeLink"] = "dashboard"; 
+
     }
 
     /**
@@ -64,14 +64,14 @@ class Dashboards extends Controller
         $providers = $this->dash->activeSprayersUsersByProfile("Provedor");
         $acticeSprayers = $this->dash->activeSprayersUsers();
         $percentage = number_format($providers / $acticeSprayers * 100, 2);
-        $color = ($percentage < 50) ? "bg-danger" : (($percentage < 75) ? 'bg-primary' : 'bg-success');
+        $color = ($percentage < 50) ? "bg-danger" : (($percentage < 75 ) ? 'bg-primary': 'bg-success'); 
         $data = array(
             "value" => "{$providers}/{$acticeSprayers}",
             "title" => "Number of Active Sprayers",
             "tooltipTitle" => "This is the total number of sprayers that have access to the system",
             "tooltipPosition" => "top",
             "progress" => [true, (int)$percentage, $color]
-
+            
         );
 
         echo json_encode(
@@ -193,23 +193,8 @@ class Dashboards extends Controller
             )
         );
     }
-    public function genderDistribution()
-    {
-        $data = array(
-            "labels" => [ "Female", "Male",],
-            "values" =>  $this->dash->genderDistribution(),
-            "id" => "number-of-farmers-by-gender",
-            "title" => "Farmers by Gender"
-        );
 
-        echo json_encode(
-            array(
-                "output" =>  $this->cView("Widgets/Pie", $data, "json")
-            )
-        );
-    }
-    public function listAll()
-    {
+    public function listAll(){
         return $this->dash->getListOfRegisteredSprayers();
     }
 }

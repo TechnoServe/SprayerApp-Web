@@ -1,0 +1,352 @@
+[03-Dec-2023 20:32:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Acquisitions_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Acquisitions_Index.php on line 14
+[03-Dec-2023 20:32:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Acquisitions_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Acquisitions_Save.php on line 14
+[03-Dec-2023 20:32:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Agreements_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Agreements_Index.php on line 14
+[03-Dec-2023 20:32:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Agreements_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Agreements_Save.php on line 13
+[03-Dec-2023 20:32:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Applications_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Applications_Index.php on line 14
+[03-Dec-2023 20:32:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Applications_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Applications_Save.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Auth_Login.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Auth_Login.php on line 12
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Campains_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Campains_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Campains_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Campains_Save.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Dashboards_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Dashboards_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Dropdowns_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Dropdowns_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Dropdowns_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Dropdowns_Save.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Equipments_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Equipments_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Equipments_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Equipments_Save.php on line 13
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Faqs_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Faqs_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Farmers_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Farmers_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Faqs_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Faqs_Save.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Farmers_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Farmers_Save.php on line 13
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Incomes_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Incomes_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Incomes_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Incomes_Save.php on line 13
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Logs_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Logs_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Payments_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Payments_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Payments_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Payments_Save.php on line 13
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Plots_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Plots_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Plots_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Plots_Save.php on line 13
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Profiles_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Profiles_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Profiles_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Profiles_Save.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Requests_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Requests_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Create.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Create.php on line 13
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Edit.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Edit.php on line 13
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Index.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Save.php on line 14
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Barchart.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Barchart.php on line 1
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Datatable.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Datatable.php on line 1
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 20
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 20
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 20
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 20
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 20
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 20
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 21
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 21
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 21
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 36
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 36
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 36
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 36
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 36
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 36
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 37
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 37
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 37
+[03-Dec-2023 20:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 70
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Undefined variable: tooltipTitle in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Kpi.php on line 1
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Undefined variable: tooltipPosition in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Kpi.php on line 1
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Undefined variable: title in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Kpi.php on line 5
+[03-Dec-2023 20:32:10 America/New_York] PHP Notice:  Undefined variable: value in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Kpi.php on line 8
+[03-Dec-2023 20:32:11 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Stackedbar.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Stackedbar.php on line 1
+[16-Dec-2023 13:36:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Acquisitions_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Acquisitions_Index.php on line 14
+[16-Dec-2023 13:36:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Acquisitions_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Acquisitions_Save.php on line 14
+[16-Dec-2023 13:36:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Agreements_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Agreements_Index.php on line 14
+[16-Dec-2023 13:36:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Agreements_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Agreements_Save.php on line 13
+[16-Dec-2023 13:36:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Applications_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Applications_Index.php on line 14
+[16-Dec-2023 13:36:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Applications_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Applications_Save.php on line 13
+[16-Dec-2023 13:36:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Auth_Login.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Auth_Login.php on line 12
+[16-Dec-2023 13:36:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Auth_new-password.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Auth_new-password.php on line 12
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Auth_password-reset.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Auth_password-reset.php on line 12
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Campaigns_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Campaigns_Index.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Campaigns_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Campaigns_Save.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Campains_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Campains_Index.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Campains_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Campains_Save.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Dashboards_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Dashboards_Index.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Dropdowns_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Dropdowns_Index.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Dropdowns_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Dropdowns_Save.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Equipments_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Equipments_Index.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Equipments_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Equipments_Save.php on line 13
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Faqs_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Faqs_Index.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Faqs_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Faqs_Save.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Farmers_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Farmers_Index.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Farmers_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Farmers_Save.php on line 13
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Farmers_sms.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Farmers_sms.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Incomes_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Incomes_Index.php on line 14
+[16-Dec-2023 13:36:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Incomes_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Incomes_Save.php on line 13
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Logs_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Logs_Index.php on line 14
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Payments_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Payments_Index.php on line 14
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Payments_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Payments_Save.php on line 13
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Plots_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Plots_Index.php on line 14
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Plots_Save.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Plots_Save.php on line 13
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Profiles_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Profiles_Index.php on line 14
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Requests_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Requests_Index.php on line 14
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Profiles_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Profiles_Save.php on line 14
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Create.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Create.php on line 13
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Edit.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Edit.php on line 13
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Index.php on line 14
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Save.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Users_Save.php on line 14
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Barchart.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Barchart.php on line 1
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Datatable.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Datatable.php on line 1
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 20
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 20
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 20
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 20
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 20
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 20
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 21
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 21
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 21
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 36
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 36
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 36
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 36
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 36
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 36
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Undefined variable: _SESSION in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 37
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 37
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Trying to access array offset on value of type null in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 37
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php:70
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Filter.php on line 70
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Undefined variable: tooltipTitle in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Kpi.php on line 1
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Undefined variable: tooltipPosition in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Kpi.php on line 1
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Undefined variable: title in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Kpi.php on line 5
+[16-Dec-2023 13:36:19 America/New_York] PHP Notice:  Undefined variable: value in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Kpi.php on line 8
+[16-Dec-2023 13:36:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Stackedbar.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/spraxmhn/public_html/views/cache/views_layouts_Widgets_Stackedbar.php on line 1

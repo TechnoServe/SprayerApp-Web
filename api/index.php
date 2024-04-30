@@ -9,6 +9,9 @@ require_once __DIR__ . "/helpers/Helper.php";
 use sprint\sroute\SRoute;
 use sprint\http\controllers\Api;
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../');
+$dotenv->load();
+
 SRoute::$root = "api/";
 
 SRoute::get("/", function(){
@@ -21,6 +24,8 @@ SRoute::post("/fetch/{table}/{uidKey}", [Api::class, "fetch"]);
 
 //get data to from the server
 SRoute::get("/profiles", [Api::class, "profiles"]);    
+SRoute::get("/faqs", [Api::class, "faqs"]);    
+SRoute::get("/campaigns", [Api::class, "campaigns"]);
 SRoute::post("/login/users", [Api::class, "authanticate"]);
 
 SRoute::run();

@@ -21,7 +21,6 @@ $(document).ready(function() {
         netIncomePerSprayers(data);
         numberOfTreesSprayedPerApplication(data);
         chemicalProvenance(data);
-        genderDistribution(data);
     }
 
     
@@ -77,13 +76,6 @@ $(document).ready(function() {
     function chemicalProvenance(data = {}) {
         callAjax('chemicalProvenance', data, {
             "container": "#chemicalProvenance"
-        });
-    }
-
-    
-    function genderDistribution(data = {}) {
-        callAjax('genderDistribution', data, {
-            "container": "#genderDistribution"
         });
     }
 

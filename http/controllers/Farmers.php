@@ -130,8 +130,8 @@ class Farmers extends Controller
                     $nrs = $data["nrs"];
                     foreach ($nrs as $nr) {
                         // Your Account SID and Auth Token from console.twilio.com
-                        $sid = "ACe62f213f7dce76e86dbf6fc6cc161b17";
-                        $token = "e991c4330e93d766e175494017a74324";
+                        $sid = $_ENV["TWILIO_SID"]; 
+                        $token = $_ENV["TWILIO_TOKEN"];
                         $client = new  Client($sid, $token);
                         // $client->setLogLevel('debug');
 
@@ -140,7 +140,7 @@ class Farmers extends Controller
                             // The number you'd like to send the message to
                             "+258{$nr}",
                             [
-                                "messagingServiceSid" => "MGc4af24a90063f0244b88b63ef2004ef9",
+                                "messagingServiceSid" => $_ENV["TWILIO_MSSID"],
                                 'body' => $data["message"] ?? "Caju+ SMS Alert!"
                             ]
                         );

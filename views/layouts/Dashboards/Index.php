@@ -15,12 +15,8 @@
 </div>
 
 <div class="row mb-2">
-	<div class="col-md-6 mt-2 mb-2" id="numberOfTreesSprayedPerApplication"></div>
-	<div class="col-md-6 mt-2 mb-2" id="genderDistribution"></div>
-</div>
-
-<div class="row mb2">
-	<div class="col-md-12 mt-2 mb-2" id="chemicalProvenance"></div>
+	<div class="col-md-5 mt-2 mb-2" id="numberOfTreesSprayedPerApplication"></div>
+	<div class="col-md-7 mt-2 mb-2" id="chemicalProvenance"></div>
 </div>
 
 <div class="row mb-2">
@@ -67,52 +63,52 @@
 			<div class="table-responsive table-responsive-lg">
 				<table id="result" class="table table-striped table-condensed table-sm nowrap table-bordered" style="width: 100%;">
 					<thead>
-						<tr>
-							<th rowspan="2">Sprayer name</th>
-							<th rowspan="2">Gender</th>
-							<th rowspan="2">Phone number</th>
-							<th rowspan="2">Administrative posts</th>
-							<th rowspan="2">District</th>
-							<th rowspan="2">Province</th>
-							<th rowspan="2">Equipments</th>
-							<th colspan="3" class="text-center">Trees sprayed</th>
-							<th rowspan="2">Farmers assisted</th>
-							<th rowspan="2">RCN Collected (KG)</th>
-							<th rowspan="2">Cash Collected (MZN)</th>
-							<th rowspan="2">Fuel Cost (MZN)</th>
-							<th rowspan="2">Employee Costs (MZN)</th>
-							<th rowspan="2">Chemical Cost (MZN)</th>
-							<th rowspan="2">Other Costs (MZN)</th>
-							<th rowspan="2">Last sync. Date</th>
-						</tr>
-						<tr>
-							<th>1st application</th>
-							<th>2nd application</th>
-							<th>3rd application</th>
-						</tr>
+					<tr>
+						<th rowspan="2">Sprayer name</th>
+						<th rowspan="2">Gender</th>
+						<th rowspan="2">Phone number</th>
+						<th rowspan="2">Administrative posts</th>
+						<th rowspan="2">District</th>
+						<th rowspan="2">Province</th>
+						<th rowspan="2">Equipments</th>
+						<th colspan="3" class="text-center">Trees sprayed</th>
+						<th rowspan="2">Farmers assisted</th>
+						<th rowspan="2">RCN Collected (KG)</th>
+                        <th rowspan="2">Cash Collected (MZN)</th>
+                        <th rowspan="2">Fuel Cost (MZN)</th>
+                        <th rowspan="2">Employee Costs (MZN)</th>
+                        <th rowspan="2">Chemical Cost (MZN)</th>
+                        <th rowspan="2">Other Costs (MZN)</th>
+                        <th rowspan="2">Last sync. Date</th>
+					</tr>
+					<tr>
+						<th>1st application</th>
+						<th>2nd application</th>
+						<th>3rd application</th>
+					</tr>
 					</thead>
 					<tbody></tbody>
 					<tfoot>
-						<tr>
-							<th class="filterFooter">Sprayer name</th>
-							<th class="filterFooter">Gender</th>
-							<th class="filterFooter">Phone number</th>
-							<th class="filterFooter">Administrative posts</th>
-							<th class="filterFooter">District</th>
-							<th class="filterFooter">Province</th>
-							<th class="filterFooter">Equipments</th>
-							<th class="">1st application</th>
-							<th class="">2nd application</th>
-							<th class="">3rd application</th>
-							<th class="">Farmers assisted</th>
-							<th class="">RCN Collected (KG)</th>
-							<th class="">Cash Collected (MZN)</th>
-							<th class="">Fuel Costs (MZN)</th>
-							<th class="">Employee Costs (MZN)</th>
-							<th class="">Chemical Cost (MZN)</th>
-							<th class="">Other Costs (MZN)</th>
-							<th class="">Last sync. Date</th>
-						</tr>
+					<tr>
+						<th class="filterFooter">Sprayer name</th>
+						<th class="filterFooter">Gender</th>
+						<th class="filterFooter">Phone number</th>
+						<th class="filterFooter">Administrative posts</th>
+						<th class="filterFooter">District</th>
+						<th class="filterFooter">Province</th>
+						<th class="filterFooter">Equipments</th>
+						<th class="">1st application</th>
+						<th class="">2nd application</th>
+						<th class="">3rd application</th>
+						<th class="">Farmers assisted</th>
+						<th class="">RCN Collected (KG)</th>
+						<th class="">Cash Collected (MZN)</th>
+						<th class="">Fuel Costs (MZN)</th>
+						<th class="">Employee Costs (MZN)</th>
+						<th class="">Chemical Cost (MZN)</th>
+						<th class="">Other Costs (MZN)</th>
+						<th class="">Last sync. Date</th>
+					</tr>
 					</tfoot>
 				</table>
 			</div>

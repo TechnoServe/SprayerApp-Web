@@ -18,7 +18,7 @@ class Campaigns extends Model
 {
     use Auditable;
 
-    private $table = "campaigns";
+    private $table = "campains";
 
     public function create()
     {

@@ -18,6 +18,7 @@ class Api extends Model
         if(!empty($data))
         {            
             unset($data["sync_status"]);
+            unset($data["id"]);
             
             $uid = $data[$uidKey];
             
@@ -69,6 +70,32 @@ class Api extends Model
             );
     }
     
+    public function faqs()
+    {
+        
+        $results = $this->select("faqs")->where("deleted_at IS NULL")->results();
+            
+        return json_encode(
+            array(
+                "status" => $this->num_rows() == 0 ? "failed" : "success",
+                "data" => $results,
+                )
+            );
+    }
+    
+    public function campaigns()
+    {
+        
+        $results = $this->select("campains")->where("deleted_at IS NULL")->results();
+            
+        return json_encode(
+            array(
+                "status" => $this->num_rows() == 0 ? "failed" : "success",
+                "data" => $results,
+                )
+            );
+    }
+    
     public function fetch($table, $data, $uidKey){
         $visibility = $data["visibility"];
         $district = $data["district"];
@@ -110,6 +137,7 @@ class Api extends Model
         $result = $this->select("users")->columns("
                 users.*,
                 profiles.name as profile_name, 
+                profiles.mobile_access as profile_mobile_access,
                 profiles.visibility as profile_visibility
             ")
             ->join("profiles ON profiles.id = users.profile_id")

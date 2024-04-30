@@ -12,6 +12,10 @@ use sprint\http\controllers\Users;
 use sprint\http\controllers\{Profiles, Farmers, Plots, Applications, Equipments, Acquisitions, Incomes, Logs, Payments, Agreements, Dropdowns, Requests, Faqs, Campaigns};
 use sprint\http\controllers\Auth;
 
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 SRoute::$root = "/";
 
 SRoute::get("/", [Dashboards::class, "index"])->middleware([Auth::class, "session"]);
@@ -63,7 +67,6 @@ SRoute::group(
 			//Chart's
 			SRoute::post("/numberOfTreesSprayedPerApplication")->method("numberOfTreesSprayedPerApplication");
 			SRoute::post("/chemicalProvenance")->method("chemicalProvenance");
-			SRoute::post("/genderDistribution")->method("genderDistribution");
 		});
 
 		SRoute::group(array(

@@ -256,8 +256,17 @@ class Dashboards extends Model
                         " . Alias::sprayers . ".mobile_number,
                         " . Alias::sprayers . ".province,
                         " . Alias::sprayers . ".district,
+                        " . Alias::sprayers . ".administrative_post,
                         " . Alias::sprayers . ".last_sync_at,
-						
+						GREATEST(
+							(SELECT IFNULL(MAX(chemical_application.last_sync_at), '1999-01-01 00:00:00') FROM chemical_application WHERE user_uid = " . Alias::sprayers . ".user_uid AND application_number = 1),
+							(SELECT IFNULL(MAX(chemical_acquisition.last_sync_at), '1999-01-01 00:00:00') FROM chemical_acquisition WHERE user_uid = " . Alias::sprayers . ".user_uid),
+							(SELECT IFNULL(MAX(equipments.last_sync_at), '1999-01-01 00:00:00') FROM equipments WHERE user_uid = " . Alias::sprayers . ".user_uid),
+							(SELECT IFNULL(MAX(farmers.last_sync_at), '1999-01-01 00:00:00') FROM farmers WHERE user_uid = " . Alias::sprayers . ".user_uid),
+							(SELECT IFNULL(MAX(payments.last_sync_at), '1999-01-01 00:00:00') FROM payments WHERE user_uid = " . Alias::sprayers . ".user_uid),
+							(SELECT IFNULL(MAX(expenses_incomes.last_sync_at), '1999-01-01 00:00:00') FROM expenses_incomes WHERE user_uid = " . Alias::sprayers . ".user_uid)
+                        
+						) as Max_Last_SyncDate,
 						(SELECT SUM(number_of_trees_sprayed) FROM chemical_application WHERE user_uid = " . Alias::sprayers . ".user_uid AND application_number = 1) AS first_application,
 						
 						(SELECT SUM(number_of_trees_sprayed) FROM chemical_application WHERE user_uid = " . Alias::sprayers . ".user_uid AND application_number = 2) AS second_application,
@@ -313,18 +322,21 @@ class Dashboards extends Model
 			array('db' => "CONCAT(" . Alias::sprayers . ".first_name, ' '," . Alias::sprayers . ".last_name)", 'dt' => 0),
 			array('db' => Alias::sprayers . ".gender", 'dt' => 1),
 			array('db' => Alias::sprayers . ".mobile_number", 'dt' => 2),
-			array('db' => Alias::sprayers . ".district", 'dt' => 3),
+			array('db' => Alias::sprayers . ".administrative_post", 'dt' => 3),
 			array('db' => Alias::sprayers . ".district", 'dt' => 4),
 			array('db' => Alias::sprayers . ".province", 'dt' => 5),
+			array('db' => "9", 'dt' => 17),
+
 		);
 
 		$columnsOrder = array(
 			array('db' => "CONCAT(" . Alias::sprayers . ".first_name, ' '," . Alias::sprayers . ".last_name)", 'dt' => 0),
 			array('db' => Alias::sprayers . ".gender", 'dt' => 1),
 			array('db' => Alias::sprayers . ".mobile_number", 'dt' => 2),
-			array('db' => Alias::sprayers . ".district", 'dt' => 3),
+			array('db' => Alias::sprayers . ".administrative_post", 'dt' => 3),
 			array('db' => Alias::sprayers . ".district", 'dt' => 4),
 			array('db' => Alias::sprayers . ".province", 'dt' => 5),
+			array('db' => "9", 'dt' => 17),
 		);
 
 		$filterCondition = DataTable::filterDt($post, $columnsFilter);
@@ -343,6 +355,7 @@ class Dashboards extends Model
 			->limit($post["length"])
 			->offset($post["start"])
 			->results();
+		// ->write(true); var_dump($resultset); exit();
 
 		$this->query = "SELECT FOUND_ROWS() AS totalRecords";
 
@@ -357,7 +370,7 @@ class Dashboards extends Model
 			$output[] = $value["name"];
 			$output[] = $value["gender"];
 			$output[] = $value["mobile_number"];
-			$output[] = $value["district"];
+			$output[] = $value["administrative_post"];
 			$output[] = $value["district"];
 			$output[] = $value["province"];
 			$output[] = $value["equipments_count"] ?? 0;
@@ -371,7 +384,7 @@ class Dashboards extends Model
 			$output[] = $value["expense_workers_kg"] + $value["expense_workers_mzn"];
 			$output[] = $value["chemical_cost"];
 			$output[] = $value["other_costs_kg"] + $value["other_costs_mzn"];
-			$output[] = $value["last_sync_at"];
+			$output[] = $value["Max_Last_SyncDate"];
 			$data[] = $output;
 
 		endforeach;

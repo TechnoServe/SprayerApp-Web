@@ -32,7 +32,7 @@ abstract class TollfreeVerificationOptions
      * @param string $businessContactFirstName The first name of the contact for the business or organization using the Tollfree number.
      * @param string $businessContactLastName The last name of the contact for the business or organization using the Tollfree number.
      * @param string $businessContactEmail The email address of the contact for the business or organization using the Tollfree number.
-     * @param string $businessContactPhone The phone number of the contact for the business or organization using the Tollfree number.
+     * @param string $businessContactPhone The E.164 formatted phone number of the contact for the business or organization using the Tollfree number.
      * @param string $externalReferenceId An optional external reference ID supplied by customer and echoed back on status retrieval.
      * @return CreateTollfreeVerificationOptions Options builder
      */
@@ -111,7 +111,8 @@ abstract class TollfreeVerificationOptions
      * @param string $businessContactFirstName The first name of the contact for the business or organization using the Tollfree number.
      * @param string $businessContactLastName The last name of the contact for the business or organization using the Tollfree number.
      * @param string $businessContactEmail The email address of the contact for the business or organization using the Tollfree number.
-     * @param string $businessContactPhone The phone number of the contact for the business or organization using the Tollfree number.
+     * @param string $businessContactPhone The E.164 formatted phone number of the contact for the business or organization using the Tollfree number.
+     * @param string $editReason Describe why the verification is being edited. If the verification was rejected because of a technical issue, such as the website being down, and the issue has been resolved this parameter should be set to something similar to 'Website fixed'.
      * @return UpdateTollfreeVerificationOptions Options builder
      */
     public static function update(
@@ -135,7 +136,8 @@ abstract class TollfreeVerificationOptions
         string $businessContactFirstName = Values::NONE,
         string $businessContactLastName = Values::NONE,
         string $businessContactEmail = Values::NONE,
-        string $businessContactPhone = Values::NONE
+        string $businessContactPhone = Values::NONE,
+        string $editReason = Values::NONE
 
     ): UpdateTollfreeVerificationOptions
     {
@@ -159,7 +161,8 @@ abstract class TollfreeVerificationOptions
             $businessContactFirstName,
             $businessContactLastName,
             $businessContactEmail,
-            $businessContactPhone
+            $businessContactPhone,
+            $editReason
         );
     }
 
@@ -179,7 +182,7 @@ class CreateTollfreeVerificationOptions extends Options
      * @param string $businessContactFirstName The first name of the contact for the business or organization using the Tollfree number.
      * @param string $businessContactLastName The last name of the contact for the business or organization using the Tollfree number.
      * @param string $businessContactEmail The email address of the contact for the business or organization using the Tollfree number.
-     * @param string $businessContactPhone The phone number of the contact for the business or organization using the Tollfree number.
+     * @param string $businessContactPhone The E.164 formatted phone number of the contact for the business or organization using the Tollfree number.
      * @param string $externalReferenceId An optional external reference ID supplied by customer and echoed back on status retrieval.
      */
     public function __construct(
@@ -347,9 +350,9 @@ class CreateTollfreeVerificationOptions extends Options
     }
 
     /**
-     * The phone number of the contact for the business or organization using the Tollfree number.
+     * The E.164 formatted phone number of the contact for the business or organization using the Tollfree number.
      *
-     * @param string $businessContactPhone The phone number of the contact for the business or organization using the Tollfree number.
+     * @param string $businessContactPhone The E.164 formatted phone number of the contact for the business or organization using the Tollfree number.
      * @return $this Fluent Builder
      */
     public function setBusinessContactPhone(string $businessContactPhone): self
@@ -458,7 +461,8 @@ class UpdateTollfreeVerificationOptions extends Options
      * @param string $businessContactFirstName The first name of the contact for the business or organization using the Tollfree number.
      * @param string $businessContactLastName The last name of the contact for the business or organization using the Tollfree number.
      * @param string $businessContactEmail The email address of the contact for the business or organization using the Tollfree number.
-     * @param string $businessContactPhone The phone number of the contact for the business or organization using the Tollfree number.
+     * @param string $businessContactPhone The E.164 formatted phone number of the contact for the business or organization using the Tollfree number.
+     * @param string $editReason Describe why the verification is being edited. If the verification was rejected because of a technical issue, such as the website being down, and the issue has been resolved this parameter should be set to something similar to 'Website fixed'.
      */
     public function __construct(
         
@@ -481,7 +485,8 @@ class UpdateTollfreeVerificationOptions extends Options
         string $businessContactFirstName = Values::NONE,
         string $businessContactLastName = Values::NONE,
         string $businessContactEmail = Values::NONE,
-        string $businessContactPhone = Values::NONE
+        string $businessContactPhone = Values::NONE,
+        string $editReason = Values::NONE
 
     ) {
         $this->options['businessName'] = $businessName;
@@ -504,6 +509,7 @@ class UpdateTollfreeVerificationOptions extends Options
         $this->options['businessContactLastName'] = $businessContactLastName;
         $this->options['businessContactEmail'] = $businessContactEmail;
         $this->options['businessContactPhone'] = $businessContactPhone;
+        $this->options['editReason'] = $editReason;
     }
 
     /**
@@ -733,14 +739,26 @@ class UpdateTollfreeVerificationOptions extends Options
     }
 
     /**
-     * The phone number of the contact for the business or organization using the Tollfree number.
+     * The E.164 formatted phone number of the contact for the business or organization using the Tollfree number.
      *
-     * @param string $businessContactPhone The phone number of the contact for the business or organization using the Tollfree number.
+     * @param string $businessContactPhone The E.164 formatted phone number of the contact for the business or organization using the Tollfree number.
      * @return $this Fluent Builder
      */
     public function setBusinessContactPhone(string $businessContactPhone): self
     {
         $this->options['businessContactPhone'] = $businessContactPhone;
+        return $this;
+    }
+
+    /**
+     * Describe why the verification is being edited. If the verification was rejected because of a technical issue, such as the website being down, and the issue has been resolved this parameter should be set to something similar to 'Website fixed'.
+     *
+     * @param string $editReason Describe why the verification is being edited. If the verification was rejected because of a technical issue, such as the website being down, and the issue has been resolved this parameter should be set to something similar to 'Website fixed'.
+     * @return $this Fluent Builder
+     */
+    public function setEditReason(string $editReason): self
+    {
+        $this->options['editReason'] = $editReason;
         return $this;
     }
 

@@ -104,7 +104,7 @@ class Farmers extends Model
     {
         return $this->select($this->table . " " . Alias::farmers)
             ->columns("ifnull( " . Alias::campaigns . ".description, 'N/A') as campaignName,  " . Alias::farmers . ".*")
-            ->left("campaings as " . Alias::campaigns . " ON DATE(" . Alias::farmers . ".created_at) BETWEEN " . Alias::campaigns . ".opening AND  " . Alias::campaigns . ".closing")
+            ->left("campains as " . Alias::campaigns . " ON DATE(" . Alias::farmers . ".created_at) BETWEEN " . Alias::campaigns . ".opening AND  " . Alias::campaigns . ".closing")
             ->results();
     }
     public function geoFarmers($prov, $distr, $gender)
@@ -147,10 +147,13 @@ class Farmers extends Model
                         " . Alias::farmers . ".administrative_post,
                         " . Alias::farmers . ".mobile_number,
                         " . Alias::farmers . ".last_sync_at,
-                        " . Alias::farmers . ".gender
+                        " . Alias::farmers . ".gender,
+                        CONCAT_WS(' '," .Alias::sprayers. ".first_name," .Alias::sprayers. ".last_name) as sprayer
 
                 ")
-            ->left("campaigns as " . Alias::campaigns . " ON DATE(" . Alias::farmers . ".created_at) BETWEEN " . Alias::campaigns . ".opening AND  " . Alias::campaigns . ".closing")
+            ->left("campains as " . Alias::campaigns . " ON DATE(" . Alias::farmers . ".created_at) BETWEEN " . Alias::campaigns . ".opening AND  " . Alias::campaigns . ".closing")
+            ->join("users as " . Alias::sprayers . " ON " . Alias::sprayers . ".user_uid = " . Alias::farmers . ".user_uid ")
+
             ->where("             
                 (" . DataTable::filter(Alias::farmers) . ")
                 {$filterCondition}
@@ -162,25 +165,27 @@ class Farmers extends Model
         $this->removeEmptyEntries();
         $post = $_POST;
         $columnsFilter = array(
-            array('db' => " CONCAT(" . Alias::farmers . ".first_name, ' '," . Alias::farmers . ".last_name) ", 'dt' => 0),
-            array('db' => Alias::farmers . ".province", 'dt' => 1),
-            array('db' => Alias::farmers . ".district", 'dt' => 2),
-            array('db' => Alias::farmers . ".administrative_post", 'dt' => 3),
-            array('db' => Alias::farmers . ".mobile_number", 'dt' => 4),
-            array('db' => Alias::farmers . ".gender", 'dt' => 5),
-            array('db' => Alias::farmers . ".last_sync_at", 'dt' => 6),
-            array('db' => Alias::campaigns . ".description", 'dt' => 7),
+            array('db' => " CONCAT_WS(' '," .Alias::sprayers. ".first_name," .Alias::sprayers. ".last_name) ", 'dt' => 0),
+            array('db' => " CONCAT(" . Alias::farmers . ".first_name, ' '," . Alias::farmers . ".last_name) ", 'dt' => 1),
+            array('db' => Alias::farmers . ".province", 'dt' => 2),
+            array('db' => Alias::farmers . ".district", 'dt' => 3),
+            array('db' => Alias::farmers . ".administrative_post", 'dt' => 4),
+            array('db' => Alias::farmers . ".mobile_number", 'dt' => 5),
+            array('db' => Alias::farmers . ".gender", 'dt' => 6),
+            array('db' => Alias::farmers . ".last_sync_at", 'dt' => 7),
+            array('db' => Alias::campaigns . ".description", 'dt' => 8),
         );
 
         $columnsOrder = array(
-            array('db' => "2", 'dt' => 0),
-            array('db' => Alias::farmers . ".province", 'dt' => 1),
-            array('db' => Alias::farmers . ".district", 'dt' => 2),
-            array('db' => Alias::farmers . ".administrative_post", 'dt' => 3),
-            array('db' => Alias::farmers . ".mobile_number", 'dt' => 4),
-            array('db' => Alias::farmers . ".gender", 'dt' => 5),
-            array('db' => Alias::farmers . ".last_sync_at", 'dt' => 6),
-            array('db' => Alias::campaigns . ".description", 'dt' => 7),
+            array('db' => "10", 'dt' => 0),
+            array('db' => "2", 'dt' => 1),
+            array('db' => Alias::farmers . ".province", 'dt' => 2),
+            array('db' => Alias::farmers . ".district", 'dt' => 3),
+            array('db' => Alias::farmers . ".administrative_post", 'dt' => 4),
+            array('db' => Alias::farmers . ".mobile_number", 'dt' => 5),
+            array('db' => Alias::farmers . ".gender", 'dt' => 6),
+            array('db' => Alias::farmers . ".last_sync_at", 'dt' => 7),
+            array('db' => Alias::campaigns . ".description", 'dt' => 8),
         );
 
         $filterCondition = DataTable::filterDt($post, $columnsFilter);
@@ -191,6 +196,7 @@ class Farmers extends Model
             ->order($order)
             ->limit($post["length"])
             ->offset($post["start"])
+            // ->write(true); var_dump($result); exit();
             ->results();
         $this->query = "SELECT FOUND_ROWS() AS totalRecords";
 
@@ -202,6 +208,7 @@ class Farmers extends Model
 
             $output = array();
 
+            $output[] = $value["sprayer"];
             $output[] = $value["name"];
             $output[] = $value["province"];
             $output[] = $value["district"];
@@ -215,7 +222,7 @@ class Farmers extends Model
             $data[] = $output;
 
         endforeach;
-
+        // var_dump("<pre>", $output); exit();
         echo json_encode(
             array(
                 "draw" => isset($post['draw']) ? intval($post["draw"]) : 0,

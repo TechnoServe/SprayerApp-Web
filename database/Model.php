@@ -5,8 +5,9 @@ namespace sprint\database;
 /** Simple and smart SQL query builder for PDO.
  * 
  */
-use \PDO; 
-use \PDOStatement; 
+
+use \PDO;
+use \PDOStatement;
 use \Memcache;
 
 class Model extends PDO
@@ -34,19 +35,26 @@ class Model extends PDO
     private $values = array();
 
     /** Caching with memcache 
-	 * 
-	 * @access public
+     * 
+     * @access public
      * @var bool
-	 */
+     */
     public $memcache = false;
-    
-	public $cache_time = 600;
-	
-	
-    public function __construct() {
+
+    public $cache_time = 600;
+
+
+    public function __construct()
+    {
         try {
+            $host = $_ENV["DATABASE_URL"];
+            $dbName = $_ENV["DATABASE_NAME"];
+            $user = $_ENV["DATABASE_USER"];
+            $password = $_ENV["DATABASE_PASSWORD"];
+            $chartset = $_ENV["DATABASE_CHARSET"];
+
             // parent::__construct('mysql:host=localhost;dbname=agriidsl_sprayer;charset=utf8', "agriidsl_sprayer","hKGJW}CmG%z2",array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-        	parent::__construct('mysql:host=localhost;dbname=sprayerapp;charset=utf8',"dev","1234",array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'") );
+            parent::__construct("mysql:host={$host};dbname={$dbName};charset={$chartset}", $user, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
             /* Extend PDO statement class */
             $this->setAttribute(PDO::ATTR_STATEMENT_CLASS, [_pdo_statement::class]);
             /* Disable emulated prepared statements */
@@ -61,99 +69,96 @@ class Model extends PDO
             echo $e->getMessage();
         }
     }
-	
+
     /** Returns the last inserted id
-	 * 
-	 * @example last_id();
-	 * @return int
-	 */
+     * 
+     * @example last_id();
+     * @return int
+     */
     public function insert_id()
     {
         return $this->lastInsertId();
     }
     /** Returns the selected row from selected table with 
-	 * the match of first column
-	 * 
-	 * @example find('imovel', 5);
-	 * @param string  $table  name of the table in the database
-	 * @param int  $id  unique id of table which is in the first column of table
- 	 * @return array
-	 */
+     * the match of first column
+     * 
+     * @example find('imovel', 5);
+     * @param string  $table  name of the table in the database
+     * @param int  $id  unique id of table which is in the first column of table
+     * @return array
+     */
     public function find($table, $id)
     {
-        if (empty($id))
-        {
+        if (empty($id)) {
             $this->query = $this->select(security($table));
 
             return $this;
-        } else 
-        {
+        } else {
             // Key is not empty, so find by first column match
             $columns = $this->column(security($table));
-            return $this->select(security($table))->where($columns['Field'].' = '.security($id))->limit(1)->result();
+            return $this->select(security($table))->where($columns['Field'] . ' = ' . security($id))->limit(1)->result();
         }
-        
-    }	
+    }
     /** Starts select query
-	 * 
-	 * @example select('imoveis')->result();
-	 * @param string $table expects a tablename
-	 * @return string
-	 */
+     * 
+     * @example select('imoveis')->result();
+     * @param string $table expects a tablename
+     * @return string
+     */
     public function select($table)
     {
-        $this->query = 'SELECT * FROM '.security($table).' ';
+        $this->query = 'SELECT * FROM ' . security($table) . ' ';
         return $this;
     }
-	/** INNER JOIN function 
-	 * 
-	 * @example select('contents')->join('categories ON categories.category_id = contents.category_id')->where('author_id = 2')->results();
-	 * 
-	 * @param string  $condition  clause for inner join 
-	 * @return string
-	 */
+    /** INNER JOIN function 
+     * 
+     * @example select('contents')->join('categories ON categories.category_id = contents.category_id')->where('author_id = 2')->results();
+     * 
+     * @param string  $condition  clause for inner join 
+     * @return string
+     */
     public function join($condition)
     {
-        $this->query .= 'INNER JOIN '.$condition.' ';
+        $this->query .= 'INNER JOIN ' . $condition . ' ';
 
         return $this;
     }
-	/** RIGHT JOIN function 
-	 * 
-	 * @example select('contents')->left('categories ON categories.category_id = contents.category_id')->where('author_id = 2')->results();
-	 * 
-	 * @param string  $condition  clause for right join 
-	 * @return string
-	 */
+    /** RIGHT JOIN function 
+     * 
+     * @example select('contents')->left('categories ON categories.category_id = contents.category_id')->where('author_id = 2')->results();
+     * 
+     * @param string  $condition  clause for right join 
+     * @return string
+     */
     public function right($condition)
     {
-        $this->query .= 'RIGHT OUTER JOIN '.$condition.' ';
+        $this->query .= 'RIGHT OUTER JOIN ' . $condition . ' ';
 
         return $this;
     }
-	/** LEFT JOIN function 
-	 * 
-	 * @example select('contents')->left('categories ON categories.category_id = contents.category_id')->where('author_id = 2')->results();
-	 * 
-	 * @param string  $condition  clause for left join 
-	 * @return string
-	 */
+    /** LEFT JOIN function 
+     * 
+     * @example select('contents')->left('categories ON categories.category_id = contents.category_id')->where('author_id = 2')->results();
+     * 
+     * @param string  $condition  clause for left join 
+     * @return string
+     */
     public function left($condition)
     {
-        $this->query .= 'LEFT OUTER JOIN '.$condition.' ';
+        $this->query .= 'LEFT OUTER JOIN ' . $condition . ' ';
 
         return $this;
     }
-	/** USING clause 
-	 * 
-	 * @example select('contents')->left('categories')->using('category_id')->where('content_id = 2')->result();
-	 * 
-	 * @param string  $column  column name for using clause
-	 * @return string
-	 */
+    /** USING clause 
+     * 
+     * @example select('contents')->left('categories')->using('category_id')->where('content_id = 2')->result();
+     * 
+     * @param string  $column  column name for using clause
+     * @return string
+     */
     public function using($column)
     {
-        $this->query .= ' USING ('.security($column).')';
+        $this->query .= ' USING (' . security($column) . ')';
 
         return $this;
     }
@@ -161,17 +166,17 @@ class Model extends PDO
      *
      * Insert prepares the statement and runs it with the given variables
      * Update prepates the statement but where methods runs it because of the syntex
-	 * 
-	 * @example insert('table_name')->values(array[]);
-	 * 
-	 * @param string   $table  table name
-	 * @return string
+     * 
+     * @example insert('table_name')->values(array[]);
+     * 
+     * @param string   $table  table name
+     * @return string
      */
     public function insert($table)
     {
         $this->type = 'insert';
 
-        $this->query = 'INSERT INTO '.security($table).' ';
+        $this->query = 'INSERT INTO ' . security($table) . ' ';
 
         return $this;
     }
@@ -179,7 +184,7 @@ class Model extends PDO
     {
         $this->type = 'insert';
 
-        $this->query = 'REPLACE INTO '.security($table).' ';
+        $this->query = 'REPLACE INTO ' . security($table) . ' ';
 
         return $this;
     }
@@ -187,185 +192,185 @@ class Model extends PDO
     {
         $this->type = 'update';
 
-        $this->query = 'UPDATE '.security($table).' SET ';
+        $this->query = 'UPDATE ' . security($table) . ' SET ';
 
         return $this;
     }
-	/** Delete from table, if key is not empty method will delete row by the first column match 
-	 * 
-	 * @example delete('table_name')->where('column_id = 5');
-	 * 
-	 * @param string  $table  table name
-	 * @param int  $id  unique id to match with the first column of table
-	 * @return deletes from the table
-	 */
+    /** Delete from table, if key is not empty method will delete row by the first column match 
+     * 
+     * @example delete('table_name')->where('column_id = 5');
+     * 
+     * @param string  $table  table name
+     * @param int  $id  unique id to match with the first column of table
+     * @return deletes from the table
+     */
     public function delete($table, $id = '')
     {
-        if (empty($id))
-        {
-            $this->query = 'DELETE FROM '.security($table).' ';
+        if (empty($id)) {
+            $this->query = 'DELETE FROM ' . security($table) . ' ';
 
             return $this;
-        } else 
-        {
+        } else {
             // Key is not empty, so delete by first column match
             $columns = $this->column($table);
-            $this->delete($table)->where(''.security($columns['Field']).' = "'.security($id).'"')->limit(1)->run();
+            $this->delete($table)->where('' . security($columns['Field']) . ' = "' . security($id) . '"')->limit(1)->run();
         }
     }
-	/** Alter table
-	 * 
-	 * @param string  $table  table name
-	 * @return string
-	 */
-	public function alter($table)
-	{
-		$this->query = 'ALTER TABLE '.security($table).' ';
-		
-		return $this;
-	}
-	/** Rename table
-	 * 
-	 * @example alter('BLOGS')->rename_to('carousel');
-	 * 
-	 * @param string  $column  column name
-	 * @param string  $datatype  data type
-	 * @return runs query
-	 */
-	public function rename_to($column, $datatype)
-	{
-		$this->query .= 'RENAME TO '.security($column).' '.security($datatype);
-		
-		$this->query($this->query);
-	}
-	/** Add column into table
-	 * 
-	 * @example alter('BLOGS')->add_column('blog_index','blog_id');
-	 * 
-	 * @param string  $column  column name
-	 * @param string  $datatype  data type
-	 * @return runs query
-	 */
-	public function add_column($column, $datatype)
-	{
-		$this->query .= 'MODIFY COLUMN '.security($column).' '.security($datatype);
-		
-		$this->query($this->query);
-	}
-	/** Drop column from table
-	 * 
-	 * @example alter('BLOGS')->drop_column('BLOGS');
-	 * 
-	 * @param string  $column  column name
-	 * @param string  $datatype  data type
-	 * @return runs query
-	 */
-	public function drop_column($column)
-	{
-		$this->query .= 'DROP COLUMN '.security($column);
-		
-		$this->query($this->query);
-	}
-	/** Add index into table
-	 * 
-	 * @example alter('BLOGS')->add_index('blog_index','blog_id');
-	 * 
-	 * @param string  $name  table name
-	 * @param string  $column  column name
-	 * @return runs query
-	 */
-	public function add_index($name, $column)
-	{
-		$this->query .= 'ADD INDEX '.security($name).' ('.security($column).')';
-		
-		$this->query($this->query);
-	}
-	/** Increase a value 
-	 * 
-	 * @example update('table_name')->increase('column_amount')->where('column_id = 2');
-	 * 
-	 * @param string  $column  column name of table
-	 * @param int  optional $value  amount to increase
-	 * @return string
-	 */
-	public function increase($column, $value = 1)
-	{
-		$column = security($column);
-		$this->query .= $column.' = '.$column.' + '.(int)$value.' ';
+    /** Alter table
+     * 
+     * @param string  $table  table name
+     * @return string
+     */
+    public function alter($table)
+    {
+        $this->query = 'ALTER TABLE ' . security($table) . ' ';
 
         return $this;
-	}
-	/** Decrease a value 
-	 * 
-	 * @example update('table_name')->decrease('column_amount', 4)->where('column_id = 2');
-	 *
-	 * @param string  $column  column name of table
-	 * @param int  optional $value  amount to decrease
-	 * @return string
-	 */
-	public function decrease($column, $value = 1)
-	{
-		$column = security($column);
-		$this->query .= $column.' = '.$column.' - '.(int)$value.' ';
+    }
+    /** Rename table
+     * 
+     * @example alter('BLOGS')->rename_to('carousel');
+     * 
+     * @param string  $column  column name
+     * @param string  $datatype  data type
+     * @return runs query
+     */
+    public function rename_to($column, $datatype)
+    {
+        $this->query .= 'RENAME TO ' . security($column) . ' ' . security($datatype);
+
+        $this->query($this->query);
+    }
+    /** Add column into table
+     * 
+     * @example alter('BLOGS')->add_column('blog_index','blog_id');
+     * 
+     * @param string  $column  column name
+     * @param string  $datatype  data type
+     * @return runs query
+     */
+    public function add_column($column, $datatype)
+    {
+        $this->query .= 'MODIFY COLUMN ' . security($column) . ' ' . security($datatype);
+
+        $this->query($this->query);
+    }
+    /** Drop column from table
+     * 
+     * @example alter('BLOGS')->drop_column('BLOGS');
+     * 
+     * @param string  $column  column name
+     * @param string  $datatype  data type
+     * @return runs query
+     */
+    public function drop_column($column)
+    {
+        $this->query .= 'DROP COLUMN ' . security($column);
+
+        $this->query($this->query);
+    }
+    /** Add index into table
+     * 
+     * @example alter('BLOGS')->add_index('blog_index','blog_id');
+     * 
+     * @param string  $name  table name
+     * @param string  $column  column name
+     * @return runs query
+     */
+    public function add_index($name, $column)
+    {
+        $this->query .= 'ADD INDEX ' . security($name) . ' (' . security($column) . ')';
+
+        $this->query($this->query);
+    }
+    /** Increase a value 
+     * 
+     * @example update('table_name')->increase('column_amount')->where('column_id = 2');
+     * 
+     * @param string  $column  column name of table
+     * @param int  optional $value  amount to increase
+     * @return string
+     */
+    public function increase($column, $value = 1)
+    {
+        $column = security($column);
+        $this->query .= $column . ' = ' . $column . ' + ' . (int)$value . ' ';
 
         return $this;
-	}
+    }
+    /** Decrease a value 
+     * 
+     * @example update('table_name')->decrease('column_amount', 4)->where('column_id = 2');
+     *
+     * @param string  $column  column name of table
+     * @param int  optional $value  amount to decrease
+     * @return string
+     */
+    public function decrease($column, $value = 1)
+    {
+        $column = security($column);
+        $this->query .= $column . ' = ' . $column . ' - ' . (int)$value . ' ';
+
+        return $this;
+    }
     /** Values method prepares the query for insert and update methods
      *  It also runs the query for insert queries, update queries will run after where clause is completed
-	 * 
-	 * @example insert('table_name')->values(array[]);
-	 * 
-	 * @param array  $values  the array to insert or update
-	 * @return string
-	 */
+     * 
+     * @example insert('table_name')->values(array[]);
+     * 
+     * @param array  $values  the array to insert or update
+     * @return string
+     */
     public function values($values)
     {
 
         $keys = array_keys($values);
- 		$paramKeys = array_map(function($each){ return ":{$each}";},$keys);
-        $keysAndParams = array_map(function($each){ return "{$each}=:{$each}"; },$keys);
-		// Cast automaticaly arrays to json
-		$vals = array_map(function($each){
-			return is_array($each) ? json_encode($each) : $each;
-		}, $values); 
+        $paramKeys = array_map(function ($each) {
+            return ":{$each}";
+        }, $keys);
+        $keysAndParams = array_map(function ($each) {
+            return "{$each}=:{$each}";
+        }, $keys);
+        // Cast automaticaly arrays to json
+        $vals = array_map(function ($each) {
+            return is_array($each) ? json_encode($each) : $each;
+        }, $values);
         $this->values = array_combine($paramKeys, $vals);
-		/* INSERT INTO books (title,author) VALUES (:title,:author); */
+        /* INSERT INTO books (title,author) VALUES (:title,:author); */
         if ($this->type == 'insert') {
-            $row = '(`'.implode("`, `", $keys).'`) ';
-            $row .= 'VALUES ('.implode(", ", $paramKeys).')';
+            $row = '(`' . implode("`, `", $keys) . '`) ';
+            $row .= 'VALUES (' . implode(", ", $paramKeys) . ')';
             $this->query .= security($row);
             $query = $this->prepare($this->query);
             $query->execute($vals);
         }
-        /* UPDATE books SET title=:title, author=:author */
-        elseif ($this->type == 'update') {
-        	$this->query .= implode(", ", $keysAndParams); 
-        	return $this;
+        /* UPDATE books SET title=:title, author=:author */ elseif ($this->type == 'update') {
+            $this->query .= implode(", ", $keysAndParams);
+            return $this;
         }
     }
     /** Where condition
-	 * 
-	 * @param string  $condition  condition to appand select, update, delete etc...
-	 * @return string, if prepended query has update method it also exacutes update
-	 */ 
+     * 
+     * @param string  $condition  condition to appand select, update, delete etc...
+     * @return string, if prepended query has update method it also exacutes update
+     */
     public function where($condition)
     {
-		$this->query .= !is_null($condition) ? ' WHERE '.$condition : ' ';
-		
-		$res = array();
+        $this->query .= !is_null($condition) ? ' WHERE ' . $condition : ' ';
+
+        $res = array();
 
 
-		if ($this->type == 'update') 
-		{
-			$query = $this->prepare($this->query);
+        if ($this->type == 'update') {
+            $query = $this->prepare($this->query);
             $query->execute($this->values);
-		}
+        }
         return $this;
     }
     /** Which columns, condition will replace with *
      *
      * @param string  $codition  clause to replace with * 
-	 * @return string 
+     * @return string 
      */
     public function columns($condition)
     {
@@ -373,138 +378,136 @@ class Model extends PDO
 
         return $this;
     }
-    
+
     /** Group condition
-	 * 
-	 * @param string  $codition  group by clause
-	 * @return string  
-	 */
+     * 
+     * @param string  $codition  group by clause
+     * @return string  
+     */
     public function group($condition)
     {
-        $this->query .= ' GROUP BY '.security($condition);;
+        $this->query .= ' GROUP BY ' . security($condition);;
 
         return $this;
     }
     /** ROLL UP- TO GET Grand Total, must be applied with group by
-	 * 
-	 * @return string  
-	 */
+     * 
+     * @return string  
+     */
     public function rollup()
     {
         $this->query .= ' WITH ROLLUP ';
 
         return $this;
     }
-    
+
     /** Having condition
-	 * 
-	 * @param string  $condition  having clause
-	 * @return string 
-	 */
+     * 
+     * @param string  $condition  having clause
+     * @return string 
+     */
     public function have($condition)
     {
-        $this->query .= ' HAVING '.$condition;
+        $this->query .= ' HAVING ' . $condition;
 
         return $this;
     }
-    
+
     /** Order condition
-	 * 
-	 * @param string  $condition  order by clause
-	 * @return string
-	 */
+     * 
+     * @param string  $condition  order by clause
+     * @return string
+     */
     public function order($condition)
     {
-        $this->query .= ' ORDER BY '.security($condition);
+        $this->query .= ' ORDER BY ' . security($condition);
 
         return $this;
     }
-    
+
     /** Limit condition
-	 * 
-	 * @example select('contents')->where('author_id = 2')->order('content_time DESC')->limit(100);
-	 * 
-	 * @param int  $limit
-	 * @return string
-	 */
+     * 
+     * @example select('contents')->where('author_id = 2')->order('content_time DESC')->limit(100);
+     * 
+     * @param int  $limit
+     * @return string
+     */
     public function limit($limit = 3000)
     {
-		$this->query .= ' LIMIT '. security($limit).' ';
+        $this->query .= ' LIMIT ' . security($limit) . ' ';
 
         return $this;
     }
-    
+
     /** Offset condition
-	 * 
-	 * @param int  $offset
-	 * @return string
-	 */
+     * 
+     * @param int  $offset
+     * @return string
+     */
     public function offset($offset = 3000)
     {
-        $this->query .= ' OFFSET '. security($offset).' ';
+        $this->query .= ' OFFSET ' . security($offset) . ' ';
 
         return $this;
     }
-    
+
     /** Return the columns of table
-	 * 
-	 * @example column('table_name')
-	 * 
-	 * @param string  $table
-	 * @return array
-	 */
+     * 
+     * @example column('table_name')
+     * 
+     * @param string  $table
+     * @return array
+     */
     public function showTables($table = null)
     {
         $query = $this->query("SHOW FULL TABLES WHERE Table_type = 'BASE TABLE'");
 
         return $query->fetchAll();
     }
-    
+
     /** Return the columns of table
-	 * 
-	 * @example column('table_name')
-	 * 
-	 * @param string  $table
-	 * @return array
-	 */
-    
+     * 
+     * @example column('table_name')
+     * 
+     * @param string  $table
+     * @return array
+     */
+
     public function showColumns($table)
     {
-        $query = $this->query('SHOW COLUMNS FROM '.security($table));
+        $query = $this->query('SHOW COLUMNS FROM ' . security($table));
 
         return $query->fetchAll();
     }
-    
+
     /** Return the columns of table
-	 * 
-	 * @example column('table_name')
-	 * 
-	 * @param string  $table
-	 * @return array
-	 */
+     * 
+     * @example column('table_name')
+     * 
+     * @param string  $table
+     * @return array
+     */
     public function column($table)
     {
-        $query = $this->query('SHOW COLUMNS FROM '.security($table));
+        $query = $this->query('SHOW COLUMNS FROM ' . security($table));
 
         return $query->fetch();
     }
-    
+
     /** Writes query string to screen, not works with methods, which returns data set, such as find, coluns etc...
-	 * 
-	 * @example select('table_name')->where('column_id = 5')->write();
-	 * @return writes query string to screen
-	 */
+     * 
+     * @example select('table_name')->where('column_id = 5')->write();
+     * @return writes query string to screen
+     */
     final public function write($dump = false)
     {
-        if($dump)
-		{
-			var_dump($this->query);
-		}else
-		{
-			echo $this->query;
-		}		
+        if ($dump) {
+            var_dump($this->query);
+        } else {
+            echo $this->query;
+        }
     }
-    
+
     /** Runs the query
      *
      * @param $return  will return query, no need to change it 
@@ -512,19 +515,18 @@ class Model extends PDO
      */
     final public function run($return = false)
     {
-        if ($return) 
-        {
+        if ($return) {
             return $this->query($this->query);
         }
 
         $this->query($this->query);
     }
-    
+
     /** Run and get the value of query
      *
-	 * @example select('table_name')->where('column_id = 5')->result();
-	 * @example select('table_name')->where('column_id = 5')->result('column_name);
-	 * 
+     * @example select('table_name')->where('column_id = 5')->result();
+     * @example select('table_name')->where('column_id = 5')->result('column_name);
+     * 
      * @param string  optional  $key    
      * @return if $key is empty it returns an array else a string
      */
@@ -533,48 +535,48 @@ class Model extends PDO
         if (!$this->memcache) {
             $query = $this->run(true);
 
-	        if (!$key) {
-	            return $query->fetch();
-	        } else {
-	            $result = $query->fetch();
-	
-	            return $result[$key];
-	        }
+            if (!$key) {
+                return $query->fetch();
+            } else {
+                $result = $query->fetch();
+
+                return $result[$key];
+            }
         }
 
         $memcache = new Memcache();
         $memcache->connect('127.0.0.1', 11211) or die('MemCached connection error!');
 
-        $data = $memcache->get('query-'.md5($this->query));
-        
+        $data = $memcache->get('query-' . md5($this->query));
+
         if (!isset($data) || $data === false) {
             $query = $this->run(true);
 
-	        if (!$key) {
-	            return $query->fetch();
-	        } else {
-	            $result = $query->fetch();
-	
-	            return $result[$key];
-	        }
+            if (!$key) {
+                return $query->fetch();
+            } else {
+                $result = $query->fetch();
 
-            $memcache->set('query-'.md5($this->query), $result, MEMCACHE_COMPRESSED, $this->cache_time);
+                return $result[$key];
+            }
+
+            $memcache->set('query-' . md5($this->query), $result, MEMCACHE_COMPRESSED, $this->cache_time);
 
             return $result;
         } else {
             return $data;
         }
     }
-    
+
     /** Runs and fetchs the result set of the query
      *
-	 * @example select('table_name')->where('column_id = 5')->results();
-	 * 
+     * @example select('table_name')->where('column_id = 5')->results();
+     * 
      * @return array  results set
      */
     final public function results($cache = true)
     {
-    	if (!$this->memcache || $cache == false) {
+        if (!$this->memcache || $cache == false) {
             $query = $this->run(true);
             $results = $query->fetch_array();
 
@@ -584,12 +586,12 @@ class Model extends PDO
         $memcache = new Memcache();
         $memcache->connect('127.0.0.1', 11211) or die('MemCached connection error!');
 
-        $data = $memcache->get('query-'.md5($this->query));
+        $data = $memcache->get('query-' . md5($this->query));
         if (!isset($data) || $data === false) {
             $query = $this->run(true);
             $results = $query->fetch_array();
 
-            $memcache->set('query-'.md5($this->query), $results, MEMCACHE_COMPRESSED, $this->cache_time);
+            $memcache->set('query-' . md5($this->query), $results, MEMCACHE_COMPRESSED, $this->cache_time);
 
             return $results;
         } else {
@@ -600,12 +602,12 @@ class Model extends PDO
      *
      * @param string  $key
      * @param string  $values
-	 * @return array  data set as pairs
+     * @return array  data set as pairs
      */
     final public function results_pairs($key, $values = [])
     {
         $results = $this->results();
-        
+
         foreach ($results as $result) {
             foreach ($values as $value) {
                 $res[$result[$key]][$value] = $result[$value];
@@ -677,8 +679,8 @@ function security($input)
 
     // Clear not allowed chars again
     for ($i = 0; $i < strlen($search); $i++) {
-        $input = preg_replace('/(&#[x|X]0{0,8}'.dechex(ord($search[$i])).';?)/i', $search[$i], $input);
-        $input = preg_replace('/(&#0{0,8}'.ord($search[$i]).';?)/', $search[$i], $input);
+        $input = preg_replace('/(&#[x|X]0{0,8}' . dechex(ord($search[$i])) . ';?)/i', $search[$i], $input);
+        $input = preg_replace('/(&#0{0,8}' . ord($search[$i]) . ';?)/', $search[$i], $input);
     }
 
     // Remove java, flash etc..
@@ -705,11 +707,10 @@ function security($input)
             }
 
             $action .= '/i';
-            $change = substr($ra[$i], 0, 2).'<x>'.substr($ra[$i], 2);
+            $change = substr($ra[$i], 0, 2) . '<x>' . substr($ra[$i], 2);
             $input = preg_replace($action, $change, $input);
 
-            if ($first == $input) 
-            {
+            if ($first == $input) {
                 $find = false;
             }
         }
@@ -743,7 +744,7 @@ function clean($input)
     $input = str_replace('&amp;', '&', $input);
     $input = str_replace('&quot;', '"', $input);
     $input = str_replace('<', '&lt;', $input);
-    $input = str_replace('>', '&gt;', $input); 
+    $input = str_replace('>', '&gt;', $input);
 
     return $input;
 }
